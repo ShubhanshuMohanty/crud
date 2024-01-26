@@ -1,12 +1,13 @@
-// import { useState } from 'react';
-// import {BrowserRouter as router,Routes,Route} from 'react-router-dom'
+import { useState } from 'react';
+import {BrowserRouter as router,Routes,Route} from 'react-router-dom'
+import Navbar from './components/Navbar';
 
 function App() {
   
 
   return (
     <>
-      <h1>sm</h1>
+      <Navbar/>
     </>
   )
 }
