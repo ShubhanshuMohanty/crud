@@ -8,7 +8,8 @@ const userRoutes= require('./routes/userRoutes.js')
 dotenv.config();
 app.use(express.json());
 //data ko json me convert karta haib  
-
+const cors=require("cors")
+app.use(cors())
 
 
 mongoose.connect(process.env.URI).then(()=>{
