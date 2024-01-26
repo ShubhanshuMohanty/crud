@@ -6,7 +6,8 @@ const dotenv=require('dotenv');
 const User2=require('./models/users.js')
 dotenv.config();
 app.use(express.json());
-//data ko json me convert karta hai
+//data ko json me convert karta haib  
+
 
 
 mongoose.connect(process.env.URI).then(()=>{
