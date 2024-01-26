@@ -13,7 +13,7 @@ function Navbar() {
     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div className="navbar-nav">
         <Link to="/" className="nav-link active" aria-current="page">Create</Link>
-        <Link to="/post" className="nav-link" >All Post</Link>
+        <Link to="/all" className="nav-link" >All Post</Link>
       </div>
     </div>
   </div>
