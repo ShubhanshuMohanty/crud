@@ -3,7 +3,8 @@ const mongoose=require("mongoose");
 const express=require("express");
 const app=express();
 const dotenv=require('dotenv');
-const User2=require('./models/users.js')
+//const User2=require('./models/users.js')
+const userRoutes= require('./routes/userRoutes.js')
 dotenv.config();
 app.use(express.json());
 //data ko json me convert karta haib  
@@ -17,6 +18,10 @@ mongoose.connect(process.env.URI).then(()=>{
     console.log("failed");
 })
 
+app.use(userRoutes);
+
+
+/*
 app.post("/",async(req,res)=>{
     const {name,age,email}=req.body;
     try {
@@ -35,3 +40,13 @@ app.post("/",async(req,res)=>{
 //     res.send("app is running");
 // })
 
+//read opretion
+app.get("/",async(req,res)=>{
+    try {
+        const showAll=User2.find();
+        res.status(201).json(showAll)
+    } catch (error) {
+        res.status(500).json(error)
+    }
+})
+*/
